@@ -8,12 +8,10 @@ import os
 # -----------------------
 # Load model & artifacts
 # -----------------------
-MODEL_PATH = "models"  # Folder where model and encoders are saved
-# NOTE: Ensure these files exist in a 'models' directory:
-# lgbm_model.joblib, label_encoders.joblib, features_list.joblib
-MODEL_FILE = os.path.join(MODEL_PATH, "lgbm_model.joblib")
-ENCODERS_FILE = os.path.join(MODEL_PATH, "label_encoders.joblib")
-FEATURES_FILE = os.path.join(MODEL_PATH, "features_list.joblib")
+MODEL_PATH = "models/lgbm_model.joblib"
+ENCODERS_FILE = "models/label_encoders.joblib"
+FEATURES_FILE = "models/features_list.joblib"
+
 
 @st.cache_data(show_spinner=False)
 def load_artifacts():
